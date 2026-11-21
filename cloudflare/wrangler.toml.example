@@ -1,0 +1,20 @@
+# Rename this file to wrangler.toml after replacing the placeholders.
+name = "saeeplus-projects"
+main = "worker.js"
+compatibility_date = "2026-10-28"
+workers_dev = true
+
+[[d1_databases]]
+binding = "DB"
+database_name = "saee-plus-shared"
+database_id = "7f42f628-0162-432e-ab26-6bbcfb5ef9b1"
+
+[vars]
+# Use the website's ORIGIN only, with no path; add comma-separated origins if needed.
+SITE_ORIGIN = "https://saeeplus2027.github.io"
+ADMIN_USER_EMAIL = "admin@saee.local"
+
+# Bind the existing R2 bucket (do not create a new bucket).
+[[r2_buckets]]
+binding = "IMAGES"
+bucket_name = "saee-projects-images"
